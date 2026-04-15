@@ -1,0 +1,46 @@
+				==================================================
+					Getting Started with PYTHON Programming
+				==================================================
+------------------------------
+Index
+------------------------------------------------------------------------------------------------------------------------------------------------------
+=>History of Python Programming Lang
+=>Versions of Python used in MNCs
+=>Downloading and Installing Python Software
+------------------------------------------------------------------------------------------------------------------------------------------------------
+					History of Python Programming Lang
+------------------------------------------------------------------------------------------------------------------------------------------------------
+=>The Python Programming Lang Concevied in the Year 1980
+=>The Python Programming Lang development Started in the Year 1989 
+=>The Python Programming Lang Officially Released in the Year 1991 Feb 20.
+=>The Python Programming Lang developed by 'GUIDO VAN ROSSUM' (Author of python Lang)
+=>The Python Programming Lang Developed at Centrum Wiskunde Informatica (CWI ) Research Institute in  Nether Land.
+=>The Python Programming Lang Maintained and Managed by a Non-Commercial Orgainzation Called 'Python Software Foundation' (PSF).
+=>The Official web site of PSF is www.python.org
+=>The ABC programming Lang is the Predecessor of Python Programming Lang
+------------------------------------------------------------------------------------------------------------------------------------------------------
+						Versions of Python used in MNCs
+------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Python Programming Lang Contains 3 Types of Versions. They are
+
+		1. Python 1.x, Here 1 Represents Major Version and x Represnets 0 1 2 3 4  5 6 7 ...etc Minor Version
+					as on today Python 1.x outdated.
+
+		2. Python 2.x, Here 2 Represents Major Version and x Represnets 0 1 2 3 4  5 6 7  Minor Version
+					as on today Python 2.x outdated on 2020-01-01
+
+		3. Python 3.x (Current Version)
+					Here 3 Represents Major Version and 
+						x Represents 0 1 2 3 4  5 6 7  8  Minor Version--Older Version
+						x Represents 9 10 11 12----------Minor Version--Older Version, Still Companies are Using
+						x Represents 13(Latest Version)--------------Minor Version--Latest Version( Bug Fix)
+						x Represents 14(Preview Version---2025-10-01)-----Minor Version
+						x Represents 15(Future Version---2026-10-01)-----Minor Version---PEPs
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Downloading and Installing Python Software
+------------------------------------------------------------------------------------------------------------------------------------------------------
+=>To Download Python Software, goto www. python.org
+=>Choose  downloads--->click on  python3.13.5
+=>Ensure that python3.13.5 down loaded.
+=>double click on down loaded File.
+------------------------------------------------------------------------------------------------------------------------------------------------------

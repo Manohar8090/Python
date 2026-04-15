@@ -1,0 +1,15 @@
+
+
+			==================================================================
+				Role of Full Stack Python Developer in Real Time  Projects
+			==================================================================
+=>As Full Stack Python Developer , we Do the following Activities.
+
+				1. Building Front Applications
+				2. Handling of Server Side Logic and Data Processing
+				3. Interacting Data Base Softwares
+				4. Implementaing the APIs ( Modules and Packages)
+				5. Development of Real Time project with Product Life Cycle (SDLC)
+				6. Writing Clean and Maintainable Code
+				7. Performing Testing (Quality assurance)+ Debugging Process.
+=========================================x=======================================================

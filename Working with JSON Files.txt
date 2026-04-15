@@ -1,0 +1,32 @@
+					=====================================================
+							Working with JSON Files
+					=====================================================
+=>JSON Stands for Java Script Object Notation.
+=>JSON File walys contains an extension .json ( FileName.json)
+=>JSON File Format is one of the Light weight File Format which is Used in Web Application Development for Exchanging the data between Client (Browser ) to server side Application.
+=>JSON File  Format contains the Data in the form of (Key,Value) and in Python It is Related to Dict Object.
+=>To work with JSON Operations, we use a Pre-defined Called 'json'.
+=>When we JSOn Concept, we have Two Types of JSON Data. They are
+				1. Json Data
+				2. Json File Data.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Json Data
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   jsondata='{"Key1":"Val1", "Key2":"Val2",  .......,"Key-n":"Val-n" }'
+=>To convert JSON Data into Dict Data, we use loads() which is present in  Pre-defined  module called 'json'
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Dict Data into Json Data
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax: DictObj={Key1:Val1, Key2:Val2,  .......,Key-n:Val-n}
+=>To convert Dict Data into JSON Data , we use str()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Dict Data into Json File Data
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax: DictObj={Key1:Val1, Key2:Val2,  .......,Key-n:Val-n}
+=>To Save the Dict Object data into the JSON File, we use dump() of json module.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+4.  Json File Data into Dict Data 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>To Read / Transfer JSON File Data into Dict Data, we use load() of json module.
+=>Syntax:       DictObjData=json.load(File Pointer)
+--------------------------------------------------------------------------------------------------------------------------------------------------------

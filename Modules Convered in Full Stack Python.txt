@@ -1,0 +1,54 @@
+			===========================================================
+					Modules Convered in Full Stack Python
+						(Job Related Course )
+			===========================================================
+*********************************************
+Module-1: PYTHON Programming Lang (back bone)
+*********************************************
+		1. Core Python Programming
+		2. Advanced Python Programming
+	Projects: 3 with Source Code +2 Project  Home work
+*********************************************
+Module-2: Python For Data Science
+*********************************************
+		1. Numpy  (Complex Math Operations )
+		2. Pandas (Data Analysis and Data Analytics)
+		3. Matplotlib( Data Visualization)
+	Projects: 3 Project with Source Code + 2 Projects Home Work
+*********************************************
+Module-3: UI Technologies
+*********************************************
+		1. HTML
+		2. CSS
+		3. Java script
+		4. Boot Strap
+		5. Angular 
+Project : Static Web Project
+*********************************************
+Module-4: Dynamic Web Frame Work
+*********************************************
+		1. Django
+		2. Flask
+		3. Rest API
+Project : Dynamic Web Project with Hosting Process
+*********************************************
+Module-5: Data Base Softwares
+*********************************************
+		1. MySQL
+		2. Mongo DB 
+*********************************************
+Module-6: Tools
+*********************************************
+		1.  Git and GitHub
+		2. Testing Methodologies
+		3.  Cloud Basics--AWS, GCP
+		4. Resume Building
+*********************************************
+=>To get the JOB --U Must be Graduate---BCA, B.Com, B.Sc, B.Tech(Any Branch), MBA, Msc,MCA. M.Tech, Phamacy,..etc
+=>For Learning this Full Stack Python--Student NEED NOT KNOW C, C++, JAVA, C#.net...etc (Dummy)
+=>KVR Makes U (Student) Expert  in CODING Provided
+				1. Student Must Attend the Classes puntually 
+				2. Student Must Do the Use Cases / Programs / Case studies
+				3. Student Must Write the Notes
+				4. Student Must Respond in the Class
+=================================================x==============================================
