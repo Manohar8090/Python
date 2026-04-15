@@ -1,0 +1,24 @@
+				==================================================
+							 Freeware and Open Source
+				==================================================
+-------------------------------
+Freeware
+-------------------------------
+=>If any Software Downloaded Freely from Official Source (www.python.org) and It is called Freeware.
+Example: Python, Java...etc
+-------------------------------
+Open Source
+-------------------------------
+=>An Open Source Software is one which is the Process  of Customization of Official Software without Prior Permissions from Official Vendors.
+=>The official Name OR Standard  Name of Python is 'cpython'.
+=>Some of the Software Company Vendors came foward and Customized 'cpython' for Development of their In-House Tools Like Project Performance Evaluation, Quality Assurence, Project Sheduling..etc.
+=>Hence the Customized  Version of cpython are called Python Distributions.
+=>Some of the Python Distributions are
+
+				1. Jpython OR Jpython--------->Used for Running Java Based Applications
+				2. IronPython OR Ipython----->Used for Running C#.Net Based Applications
+				3. Micro Python------------------>Used for developing and running Mirco Controllers.
+				4. StackLessPython-------------->used for Developing Concurrency Based Application.
+				5. Anaconda Python------------>used for Developing Hadoop OR Big data Applications.
+				...........................etc
+=============================================================================================

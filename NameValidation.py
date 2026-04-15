@@ -1,0 +1,18 @@
+#NameValidation.py<--Module Name
+from NameExcept import ZeroNameLengthError, SpaceError,InValidNameError
+def validatename(name):
+    if(len(name)==0):
+        raise ZeroNameLengthError
+    elif(name.isspace()):
+        raise SpaceError
+    else:
+        res=True
+        words=name.split()
+        for word in words:
+            if(not word.isalpha()):
+                res=False
+                break
+        if(res):
+            return name
+        else:
+            raise InValidNameError

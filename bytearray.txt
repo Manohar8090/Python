@@ -1,0 +1,186 @@
+				==========================================================
+								3. bytearray
+				==========================================================
+=>Here 'bytearray' is one of the Pre-Defined Class and treated as Sequence Type.
+=>The Purpose of 'bytearray' data type is that "To Implement End-to-End Encryption of Data between two ends for getting Security."
+=>To Implement End-to-End Encryption of Data between two ends for getting Security by using bytearray data, bytearray 
+    data   type      uses the Numerical Integer Values ranges from (0,256).
+=>Programatically, There is no Symbolic  Notation for Representing bytearray data. But we can convert Other Types of Values  into bytearray type by using bytearray().
+		Syntax:   varname=bytearray(IterableObject)
+=>An object of bytearray Maintains  Insertion order. Nothing but What ever the Order we organize the data, In the same order  the data will be displayed.
+=>On the Object of bytearray, we can perform Both Indexing and Slicing Operations.
+=>An Object of bytearray belongs to MUTABLE bcoz 'bytearray' object  supports item assignment
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE:  The Functionality of bytearray is extactly similar to bytes. But an object of bytes belongs to IMMUTABLE bcoz bytes  object does not support Item Assigment where as an object of bytearray belongs to MUTABLE bcoz bytearray object supports Item Assignment.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> lst=[146,167,233,256,0,199,221,189]
+>>> print(lst,type(lst))-------------[146, 167, 233, 256, 0, 199, 221, 189] <class 'list'>
+>>> ba=bytearray(lst)----------------ValueError: byte must be in range(0, 256)
+>>> lst=[146,-167,233,255,0,199,221,189]
+>>> print(lst,type(lst))------------------[146, -167, 233, 255, 0, 199, 221, 189] <class 'list'>
+>>> ba=bytearray(lst)-----------------ValueError: byte must be in range(0, 256)
+----------------------------------------------------------
+>>> lst=[146,167,233,255,0,199,221,189]
+>>> print(lst,type(lst))----------[146, 167, 233, 255, 0, 199, 221, 189] <class 'list'>
+>>> ba=bytearray(lst)
+>>> print(ba,type(ba))-------------bytearray(b'\x92\xa7\xe9\xff\x00\xc7\xdd\xbd') <class 'bytearray'>
+>>> for val in ba:
+...		print(val)
+...
+			146
+			167
+			233
+			255
+			0
+			199
+			221
+			189
+>>> ba[0]----------------------------146
+>>> ba[-1]---------------------------189
+>>> for val in ba[::2]:
+...		print(val)
+...
+							146
+							233
+							0
+							221
+>>> for val in ba[2:6]:
+...		print(val)
+...
+							233
+							255
+							0
+							199
+----------------------------------------------------
+>>> lst=[146,167,233,255,0,199,221,189]
+>>> ba=bytearray(lst)
+>>> print(ba,type(ba),id(ba))------bytearray(b'\x92\xa7\xe9\xff\x00\xc7\xdd\xbd') <class 'bytearray'> 2569451211056
+>>> for val in ba:
+...		 print(val)
+...
+		146
+		167
+		233
+		255
+		0
+		199
+		221
+		189
+>>> ba[0]=248  # Item Assigment---Mutable--allowed
+>>> print(ba,type(ba),id(ba))---bytearray(b'\xf8\xa7\xe9\xff\x00\xc7\xdd\xbd') <class 'bytearray'> 2569451211056
+>>> for val in ba:
+...		print(val)
+...
+			248
+			167
+			233
+			255
+			0
+			199
+			221
+			189
+=============================================x===================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

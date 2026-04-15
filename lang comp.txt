@@ -1,0 +1,61 @@
+-----------------------------------------------------------------------------------------------------
+Execution Environment of C, C++ Languages
+-----------------------------------------------------------------------------------------------------
+=>Data types:
+   ---------------------
+   =>The purpose of Data type is that "To allocate Suff Amount of Memory Space in Main Memory of Computer for Storing Inputs"
+			--------------------------		----------------------------------------------------------------
+				Data Type				MS-OS					UNIX
+			--------------------------		----------------------------------------------------------------
+				int						2 bytes					4 bytes			
+				float					4 bytes with 7 DP		8 bytes with 7  DP
+				double					8 bytes with 15DP		16 bytes with 15 DP
+				char					1 byte					1 byte			
+				
+=>In C, C++ Prog Lang, Data types Takes Different Memory Spaces on Different OSes. So that C, C++ Prog Lang Based Applications are not allowed for Cross-platform Compilation and Cross-platform Execution.
+=>Hence C, C++ lang are Platform Dependent.
+-----------------------------------------------------------------------------------------------------
+Execution Environment of Java  Language
+-----------------------------------------------------------------------------------------------------
+=>Data types:
+   ---------------------
+   =>The purpose of Data type is that "To allocate Suff Amount of Memory Space in Main Memory of Computer for Storing Inputs"
+			--------------------------		----------------------------------------------------------------
+				Data Type				MS-OS					UNIX
+			--------------------------		----------------------------------------------------------------
+				byte						1					1
+				short						2					2
+				int							4					4
+				long						8					8
+				float						4 with 7dp			4 with 7 dp
+				double						8 with 15 DP			8 with 15 DP
+				char						2					2
+				boolean						0					0
+=>In  Java Prog Lang, Data types Takes Same Memory Spaces on Different OSes. So that Java  Prog Lang Based Applications are allowed for Cross-platform Compilation and Cross-platform Execution.
+=>Hence Java lang is Platform Independent.
+------------------------------------------------------------
+Limitations
+------------------------------------------------------------
+			1. Java Data type (Non-Object Approach) Stores only Limited amount of Data only
+						(Not able to store Large Vol of Data)
+			2. java Data types (Non-Object Approach) Stores only  Single Value 
+						(Not able to store Multiple Values)
+
+=>In Java Program, How can i Store Multiple Values?
+			ANS: By using Java Objects
+						Behind Every object-------there exist a Class.
+=>Java Objects tores Multiple Values and Platform Indp
+			Limitation:  Size Restricted
+
+-----------------------------------------------------------------------------------------------------
+Execution Environment of PYTHON  Language
+-----------------------------------------------------------------------------------------------------
+int					str					list					dict
+float				bytes				tuple				NoneType
+bool				bytearray			set
+complex				range				frozetset
+
+The above data type does not contains Memory space Restrictions
+Python--Stores every thing in Object.<-----Class
+				Stores un-Limited amount of data.---runs on every OS
+-----------------------------------------------------------------------------------------------------

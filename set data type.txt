@@ -1,0 +1,115 @@
+			===================================================================
+							1. set
+			===================================================================
+Index
+--------------------------------------------------------------------------------
+=>What is Purpose of set
+=>Notation of set
+=>Memeory Management of set
+			+Ve Index
+			-Ve Index
+=>Operations on Set
+		a) Indexing
+		b) Slicing
+=>Types of set Objects
+		a) Empty set
+		b) Non-Empty set
+=>Pre-Defined Functions in set--Most Imp
+=>Programming Examples
+=>Problem Statement solving by Set Functions with Ven Diagrams
+=>Problem Statement solving by Bitwise Operators with Ven Diagrams (Paypall)
+=>Programming Examples.
+=>Inner OR Nested set
+=>Pre-Defined Functions on set 
+=>Combinations of set with list and tuple
+=>Programming Examples.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Properties of set
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Here 'set' is one of the Pre-Defined Class and Treated as Set Category Data type.
+=>The Purpose of 'set' Data type is that "To store Multiple Values either of same Type OR Different Type OR Both the 
+    Types in Single Object with Unique Values Only (Duplicates are not allowed) ".
+=>To store the Values in set, we use a Symbolic Notation called Curly Braces { } and the Values Must be separated by Comma.
+			Syntax:   varname={Val1,Val2,....,Val-n}
+=>An Object of set never maintains Insertion order bcoz PVM displays any one Possibility of Elements of Set(Un_ordered 
+   Collection of well-defined Elements is called set).
+=>An object of set does not support Indexing and Slicing Operatiuons bcoz set never maitains Insertion order.
+=>Set Object  belongs to Both Mutable  bcoz are  adding, removing Elements  and Immmutable bcoz set object does not 
+    support Item assignment.
+=>with the help of set class, we can create two types of set Objects. They are
+				1. Empty Set
+				2. Non-Empty Set
+------------------------------------
+1. Empty Set
+------------------------------------
+=>An Empty Set is one, which does not contain any Elements and whose length is 0
+=>Syntax:    varname=set()
+------------------------------------
+2. Non-Empty set
+------------------------------------
+=>A Non-Empty set is one, which contains elements and whose length is >0
+=>Syntax-1:   varname={Val1.,Val2,....,Val-n}
+=>Syntax-2:   varname={ [Val1,Val2,....,Val-n] }
+=>Syntax-3:   varname={ (Val1,Val2,....,Val-n) }
+=>Syntax-4:   varname={ str }
+=>Syntax-5:   varname={ [Non-Iterable-Object]  }
+=>Syntax-6:   varname={ (Non-Iterable-Object,)  }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> s1={10,20,30,40,10,20,50,60}
+>>> print(s1,type(s1))---------------{50, 20, 40, 10, 60, 30} <class 'set'>
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1))---------------{'RS', True, 34.56, 10, (2+3j)} <class 'set'>
+---------------------------------------------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1))--------------{'RS', True, 34.56, 10, (2+3j)} <class 'set'>
+>>> s1[0]---------------------TypeError: 'set' object is not subscriptable
+>>> s1[0:4]-------------------TypeError: 'set' object is not subscriptable
+----------------------------------------------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1),id(s1))-----------------{'RS', True, 34.56, 10, (2+3j)} <class 'set'> 2378857046176
+>>> s1[0]="Rossum"------------TypeError: 'set' object does not support item assignment
+>>> s1.add("HYD")
+>>> print(s1,type(s1),id(s1))---------{'RS', True, 34.56, 'HYD', 10, (2+3j)} <class 'set'> 2378857046176
+---------------------------------------------------------------
+>>> x=set()
+>>> print(x,type(x))---------------set() <class 'set'>
+>>> len(x)----------------------------0
+---------------------------------------------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1))------------------------{'RS', True, 34.56, 10, (2+3j)} <class 'set'>
+>>> len(s1)-------------------------------------5
+---------------------------------------------------------------
+>>> s="PYTHON"
+>>> print(s,type(s))
+PYTHON <class 'str'>
+>>> s1=set(s)
+>>> print(s1,type(s1))
+{'O', 'Y', 'T', 'N', 'H', 'P'} <class 'set'>
+>>> lst=[10,20,30,10,20,30,40,50]
+>>> print(lst,type(lst))
+[10, 20, 30, 10, 20, 30, 40, 50] <class 'list'>
+>>> s1=set(lst)
+>>> print(s1,type(s1))
+{40, 10, 50, 20, 30} <class 'set'>
+-------------------------------------------------------------
+>>> s="MISSISSIPPI"
+>>> print(s,type(s))
+MISSISSIPPI <class 'str'>
+>>> s1=set(s)
+>>> print(s1,type(s1))
+{'M', 'S', 'I', 'P'} <class 'set'>
+-------------------------------------------------------------
+>>> a=10
+>>> print(a,type(a))-------------------10 <class 'int'>
+>>> s1=set(a)---------------------------TypeError: 'int' object is not iterable
+>>> s1=set([a])
+>>> print(s1,type(s1))----------------{10} <class 'set'>
+>>> s2=set((a))-------------------------TypeError: 'int' object is not iterable
+>>> s2=set((a,))
+>>> print(s2,type(s2))-------------------{10} <class 'set'>
+===========================================x====================================================
+
+
+

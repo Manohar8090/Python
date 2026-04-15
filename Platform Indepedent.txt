@@ -1,0 +1,35 @@
+				=============================================================
+							2. Platform Indepedent 
+				=============================================================
+-------------------------
+What is Platform
+-------------------------
+=>A Platform is nothing but type of OS being used to run or execute the Application / Project / Program
+----------------------------------------------
+What is OS (Operating System)
+----------------------------------------------
+=>OS is one of System Software which acts as Interface between Program and Computer Hardware(RAM, CPU, HDD,..etc)
+						OR
+=>OS is one of System Software which acts as Resource Allocation manager During Program Execution and also acts as Re-Deallocation manager after program execution.
+-----------------------------------------------------------------------------------
+=>In IT, we have 2 Types of Languages. They are
+
+			1. Platform Depedendent Languages
+			2. Platform Indepedendent Languages
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Platform Dependent Languages.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Since C, C++lang Data type Takes Different Memory spaces on Different OSes hence C,C++ Lang related Applications does not support Cross-Platform Compilation and execution is not Possible and hence These Lang are called  Plotform Depedent Lang.
+=>Hence In Platform Dependent Lang, Data Types differes from One OS to Another OS and and These Lang are PLATFORM DEPENDENT.
+Examples:  C, C++ 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Platform Independent Languages.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Platform Independent Lang, The Memory Space taken by Data Types  remains Same on All Types OSes.
+=>In Effective Platform Independent Lang, all types of Values will store in the form of OBJECTs and they can store 
+   Un-Limited amount of data
+=>Hence java Object contains Size Restricted and Memory space Restricted where Python Objects contains Un-limited 
+   Size and unlimited values can store.
+NOTE: IN PYTHON ALL VALUES ARE STORED IN THE OF OBJECTS.
+Examples:  Java, PYTHON
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+#DateWithLocalVersionsEx.py
+from datetime import datetime as dt
+td=dt.now()
+print("Type of td=",type(td))
+print("----------------------------------------------")
+print("Today Date and Time")
+print(td)
+print("----------------------------------------------")
+print("\tDay number of year 001-366/365=",td.strftime("%j"))
+print("\tWeek number of year(Sunday as the first day of week)=",td.strftime("%U"))
+print("\tWeek number of year(Monday as the first day of week)=",td.strftime("%W"))
+print("\tLocal version of date and time=",td.strftime("%c"))
+print("\tCentury	=",td.strftime("%C"))
+print("\tLocal version of date=",td.strftime("%x"))
+print("\tLocal version of time=",td.strftime("%X"))
+print("----------------------------------------------")

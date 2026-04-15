@@ -1,0 +1,421 @@
+				=================================================================
+						Pre-Defined Functions in set--Most Imp
+				=================================================================
+=>On set Object, we can perform Various Operations by using Pre-Defined Functions in set object. They are
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+1. add()
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax: SetObj.add(Value)
+=>This Function is used for adding the value to set object.
+---------------------------
+Examples
+---------------------------
+>>> s1={10,"RS","Python"}
+>>> print(s1,type(s1),id(s1))
+{'RS', 10, 'Python'} <class 'set'> 2378857044384
+>>> s1.add("NL")
+>>> print(s1,type(s1),id(s1))
+{'RS', 10, 'Python', 'NL'} <class 'set'> 2378857044384
+>>> s1.add(34.56)
+>>> print(s1,type(s1),id(s1))
+{'RS', 34.56, 10, 'NL', 'Python'} <class 'set'> 2378857044384
+----------------------
+>>> s1=set()
+>>> print(s1,type(s1),id(s1))
+set() <class 'set'> 2378889695232
+>>> s1.add(100)
+>>> s1.add("Python")
+>>> s1.add(3.4)
+>>> print(s1,type(s1),id(s1))
+{3.4, 'Python', 100} <class 'set'> 2378889695232
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+2. remove()
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   setobj.remove(Value)
+=>This Function removes the  Specified Value from set Object.
+=>If the Specified Value does not exist in set Object then we get KeyError.
+--------------------------
+Examples
+--------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1),id(s1))
+{'RS', True, 34.56, 10, (2+3j)} <class 'set'> 2378889695008
+>>> s1.remove(10)
+>>> print(s1,type(s1),id(s1))
+{'RS', True, 34.56, (2+3j)} <class 'set'> 2378889695008
+>>> s1.remove(34.56)
+>>> print(s1,type(s1),id(s1))
+{'RS', True, (2+3j)} <class 'set'> 2378889695008
+>>> s1.remove(10)---------------------KeyError: 10
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+3. discard()
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:      SetObj.discard(Value)
+=>This Function removes the  Specified Value from set Object.
+=>If the Specified Value does not exist in set Object then we get None OR Space as Result
+---------------------------
+Examples
+---------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> print(s1,type(s1),id(s1))
+{'RS', True, 34.56, 10, (2+3j)} <class 'set'> 2378857046176
+>>> s1.discard(10)
+>>> print(s1,type(s1),id(s1))
+{'RS', True, 34.56, (2+3j)} <class 'set'> 2378857046176
+>>> s1.discard(2+3j)
+>>> print(s1,type(s1),id(s1))
+{'RS', True, 34.56} <class 'set'> 2378857046176
+>>> s1.discard(True)
+>>> print(s1,type(s1),id(s1))
+{'RS', 34.56} <class 'set'> 2378857046176
+>>> s1.discard("Rudra")--------------Space
+			OR
+>>> print(s1.discard("Rudra"))------None
+------------------------------
+>>> set().remove(10)---------------KeyError: 10
+>>> set().discard(10)---------------Space
+			OR
+>>> print(set().discard(10))----------None
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+4. pop()
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   SetObj.pop()
+=>This Function is used for Removing and return an arbitrary element from set object.
+=>When we call this Function on empty set then we get KeyError.
+--------------------------------
+Examples
+--------------------------------
+>>> s1={10,"RS",34.56,True,2+3j}
+>>> s1.pop()
+'RS'
+>>> s1.pop()
+True
+>>> s1.pop()
+34.56
+>>> s1.pop()
+10
+>>> s1.pop()
+(2+3j)
+>>> s1.pop()------------KeyError: 'pop from an empty set'
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+5. clear()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax: SetObj.clear()
+=>This fucntion removes all the values of set object.
+=>If we call this Function on empty set object then we get None OR Space as Result.
+------------------------------
+Examples
+------------------------------
+>>> s1={10,"Rossum",45.67,True,2+3j}
+>>> print(s1,type(s1))
+{True, 'Rossum', 10, (2+3j), 45.67} <class 'set'>
+>>> len(s1)
+5
+>>> s1.clear()
+>>> print(s1,type(s1))
+set() <class 'set'>
+>>> len(s1)
+0
+>>> print(set().clear())---------None
+>>> set().clear()---------------Space
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+6. copy()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    setObj2=SetObj1.copy()
+=>This Function Copy the Content of SetObj1 to SetObj2 (Implements Shallow copy).
+--------------------------------------------
+Examples
+--------------------------------------------
+>>> s1={10,"Rossum",45.67}
+>>> print(s1,type(s1),id(s1))
+{10, 'Rossum', 45.67} <class 'set'> 2790408052448
+>>> s2=s1.copy()
+>>> print(s2,type(s2),id(s2))
+{10, 'Rossum', 45.67} <class 'set'> 2790408049984
+>>> s1.add(123)
+>>> s2.add(3.4)
+>>> print(s1,type(s1),id(s1))
+{10, 123, 'Rossum', 45.67} <class 'set'> 2790408052448
+>>> print(s2,type(s2),id(s2))
+{10, 3.4, 'Rossum', 45.67} <class 'set'> 2790408049984
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+7. isdisjoint()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:  SetObj1. isdisjoint(SetObj2)
+=>This Function  returns True Provided There is No Common Element(s) between SetObj1 and SetObj2
+=>This Function  returns False Provided There is atleast One Element(s) between SetObj1 and SetObj2
+-----------------------------
+Examples
+-----------------------------
+>>> s1={10,20,30,40}
+>>> s2={20,25,35,45}
+>>> s3={1,2,3,4}
+>>> s1.isdisjoint(s3)
+True
+>>> s1.isdisjoint(s2)
+False
+>>> s3.isdisjoint(s2)
+True
+---------------------------------
+>>> set("PYTHON").isdisjoint(set("Java"))
+True
+>>> set("PYTHON").isdisjoint(set("MANGO"))
+False
+----------------------------------
+>>> set().isdisjoint(set())
+True
+>>> {10,20,30}.isdisjoint(set())
+True
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+8. issuperset()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj1.issuperset(SetObj2)
+=>This Function Returns True Provided SetObj1 contains all the elements of  SetObj2 Otherwise Returns False.
+--------------------------
+Examples
+-------------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20}
+>>> s3={40,50,60,70}
+>>>
+>>> s1.issuperset(s2)
+True
+>>> s2.issuperset(s1)
+False
+>>> s1.issuperset(s3)
+False
+>>> s2.issuperset(s3)
+False
+>>> s3.issuperset(s2)
+False
+------------------------------
+>>> set().issuperset(set())
+True
+>>> {10,20,30}.issuperset(set())
+True
+>>> set().issuperset({10,20,30})
+False
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+9. issubset()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj1.issubset(SetObj2)
+=>This Function Returns True Provided all the Elements of SetObj2 Present in SetObj1 otherwise returns False.
+---------------------
+Examples
+---------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20}
+>>> s3={40,50,60,70}
+>>>
+>>> s2.issubset(s1)
+True
+>>> s2.issubset(s3)
+False
+>>> s1.issubset(s2)
+False
+>>> s3.issubset(s2)
+False
+>>> s3.issubset(s1)
+False
+----------------------------------
+>>> set().issubset(set())
+True
+>>> set().issubset({10,20,30})
+True
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+10. union()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj3=setobj1.union(setobj2)
+=>Syntax:    SetObj-n=setobj1.union(setobj2,SetObj3,.....)
+=>This Function Takes all Unique Elements of SetObj1,SetObj2,,......and Place Those Unique Elements SetObj3/Setobj-n
+----------------------------
+Examples
+----------------------------
+>>> print(s1,type(s1))----------{40, 10, 20, 30} <class 'set'>
+>>> print(s2,type(s2))----------{50, 20, 30, 60} <class 'set'>
+>>> s3=s1.union(s2)
+>>> print(s3,type(s3))
+{40, 10, 50, 20, 60, 30} <class 'set'>
+>>> s4=s1.union(s2,{1,2,3,4})
+>>> print(s4,type(s4))
+{1, 2, 3, 4, 40, 10, 50, 20, 60, 30} <class 'set'>
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+11. intersection()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj3=setobj1.intersection(setobj2)
+=>Syntax:    SetObj-n=setobj1.intersection(setobj2,SetObj3,.....)
+=>This Function Takes all Common Elements from SetObj1,SetObj2,,......and Place Those Unique Elements SetObj3/Setobj-n
+-----------------------------
+Examples
+-----------------------------
+>>> s1={10,20,30,40}
+>>> s2={20,30,50,60}
+>>> print(s1,type(s1))----------{40, 10, 20, 30} <class 'set'>
+>>> print(s2,type(s2))----------{50, 20, 30, 60} <class 'set'>
+>>> s3=s1.intersection(s2)
+>>> print(s3,type(s3))------------{20, 30} <class 'set'>
+>>> s4=s1.intersection(s2,{1,2,3})
+>>> print(s4,type(s4))------------set() <class 'set'>
+>>> s4=s1.intersection(s2,{10,2,3})
+>>> print(s4,type(s4))-------------set() <class 'set'>
+>>> s4=s1.intersection(s2,{20,2,3})
+>>> print(s4,type(s4))------------{20} <class 'set'>
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+12. difference()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj3=setobj1.difference(setobj2)
+=>This Function Removes the Common Elements from SetObj1 and SetObj2 and take Remaining Elements from SetObj1 and place those Elements in SetObj3.
+--------------------------
+Examples
+-------------------------
+>>> s1={10,20,30,40}
+>>> s2={20,30,50,60}
+>>> print(s1,type(s1))----------{40, 10, 20, 30} <class 'set'>
+>>> print(s2,type(s2))----------{50, 20, 30, 60} <class 'set'>
+>>> s3=s1.difference(s2)
+>>> print(s3,type(s3))----------------{40, 10} <class 'set'>
+>>> s4=s2.difference(s1)
+>>> print(s4,type(s4))----------------{50, 60} <class 'set'>
+>>> {10,20,30}.difference({10,20,30})
+set()
+>>> set("PYTHON").difference(set("PYTHON"))
+set()
+>>> {10,20,30}.difference(set())
+{10, 20, 30}
+>>> set().difference({10,20,30})
+set()
+>>> {10,20,30}.difference({10,20,30,40,50})
+set()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+13. symmetric_difference()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj3=setobj1.symmetric_difference(setobj2)
+=>This Function Removes the Common Elements from both SetObj1 and SetObj2 and take Remaining Elements from SetObj1 and SetObj2 and place those Elements in SetObj3.
+--------------------------
+Formula-1
+--------------------------
+ SetObj3=setobj1.symmetric_difference(setobj2) = setobj1.union(setobj2).difference(setobj1.intersection(setobj2))
+ --------------------------
+Formula-2
+--------------------------
+ SetObj3=setobj1.symmetric_difference(setobj2) = setobj1..difference(setobj2).union(setobj2.difference(setobj1))
+------------------------
+Examples
+------------------------
+>>> s1={10,20,30,40}
+>>> s2={20,30,50,60}
+>>>
+>>> s3=s1.symmetric_difference(s2)
+>>> print(s3,type(s3))
+{40, 10, 50, 60} <class 'set'>
+			OR
+>>> s4=s1.union(s2).difference(s1.intersection(s2))
+>>> print(s4,type(s4))------------{40, 10, 50, 60} <class 'set'>
+			OR
+>>> s5=s1.difference(s2).union(s2.difference(s1))
+>>> print(s5,type(s5))------------{40, 10, 50, 60} <class 'set'>
+
+>>> {10,20,30}.symmetric_difference({1,2,3})
+{1, 2, 3, 10, 20, 30}
+>>> {10,20,30}.symmetric_difference({10,20,30})------------set()
+-----------------------
+>>> s1="RADAR"
+>>> s2="ABRAKADABRA"
+>>> s3=set(s1).symmetric_difference(set(s2))
+>>> print(s3)
+{'K', 'B'}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+14. update()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   SetObj1.update(setobj2)
+=>This Function is nused for Merging the Elements of setobj2 with setobj1. 
+--------------------
+Examples
+--------------------
+>>> s1={10,20,30,40}
+>>> s2={1,2,3}
+>>> print(s1,id(s1))--------------{40, 10, 20, 30} 2790408049984
+>>> s3=s1.update(s2)
+>>> print(s1,id(s1))--------------{1, 2, 3, 20, 40, 10, 30} 2790408049984
+>>> print(s3)---------------------None
+-----------------------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20,3}
+>>> s1.update(s2)
+>>> print(s1)
+{3, 20, 40, 10, 30}
+----------------------------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20,30,40}
+>>> s1.update(s2)
+>>> print(s1)----------{40, 10, 20, 30}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+15. difference_update()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   SetObj1.difference_update(SetObj2)
+=>This Function Removes the Common Elements from SetObj1 and SetObj2 and take Remaining Elements from SetObj1 and place those Elements in SetObj1  Itself.
+-----------------------------
+>>> s1={10,20,30,40}
+>>> s2={10,20,50,60}
+>>>
+>>> s1.difference_update(s2)
+>>> print(s1)
+{40, 30}
+>>> {10,20,30}.difference_update(s2)
+>>>
+>>> s1={10,20,30}
+>>> s2={10,20,50,60}
+>>> s1.difference_update(s2)
+>>> print(s1)
+{30}
+>>> s1={10,20,30}
+>>> s2={10,20,30,40}
+>>> s1.difference_update(s2)
+>>> print(s1)
+set()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+16. intersection_update()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    SetObj3=setobj1.intersection_update(setobj2)
+=>This Function Takes all Common Elements from SetObj1,SetObj2 and Place Those Unique Elements SetObj1 Itself.
+-----------------------------
+Examples
+------------------------------
+>>> s1={10,20,30}
+>>> s2={10,40,50}
+>>> s1.intersection_update(s2)
+>>> print(s1)
+{10}
+--------------------------------------
+>>> s1={10,20,30}
+>>> s2={1,2,3}
+>>> s1.intersection_update(s2)
+>>> print(s1)
+set()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+17. symmetric_difference_update()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    setobj1.symmetric_difference_update(setobj2)
+=>This Function Removes the Common Elements from both SetObj1 and SetObj2 and take Remaining Elements from SetObj1 and SetObj2 and place those Elements in SetObj1 itself.
+---------------------------
+Examples
+---------------------------
+>>> s1={10,20,30}
+>>> s2={30,40,50}
+>>>
+>>> s1.symmetric_difference_update(s2)
+>>> print(s1)
+{40, 10, 50, 20}
+>>>
+>>> s1={10,20,30}
+>>> s2={10,20,30}
+>>> s1.symmetric_difference_update(s2)
+>>> print(s1)
+set()
+>>> s1={10,20,30}
+>>> s2={1,2,3}
+>>> s1.symmetric_difference_update(s2)
+>>> print(s1)
+{1, 2, 3, 10, 20, 30}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
