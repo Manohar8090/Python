@@ -1,0 +1,34 @@
+				=======================================================
+							Parameters and Arguments
+				=======================================================
+----------------------------------
+Parameters
+----------------------------------
+=>Parameters are Of Tow Types.
+			1. Formal Parameters / Variables
+					=>Used in Function Heading
+					=>The Use of Formal Parameters is that "To store the Inputs Coming from Fucntion calls"
+			2. Local Parameters / Variables:
+					=>Used in Function Body
+					=>The Use of  Local Parameters / Variables is that "To store the Temp Results OR Function 
+					    Processing Results"
+=>The Values of Formal Parameters and Local Parameters can accessed within in Function Definition Only. But Not 
+    Possible to access in Other Part of the Program.
+Examples:		def   sumop(a,b,c): # Here a,b,c are called formal parameters
+					------------------------
+					d=a+b+c		# Here d,e are called Local Variables.
+					e=a*b*c
+					------------------------
+----------------------------------
+Arguments (Actual Arguments OR Parameters)
+----------------------------------
+=>Arguments are Nothing But Variables OR Values Used in Function Call.
+Examples:				k=10
+						v=20
+						r=5
+						sumop(k,v,r) # Function Call---here k,v,r are called Arguments
+							OR
+						sumop(10,20,30) # Function Call---10,20,30 are called for Argument Values
+
+MOST IMP: The Relationship between Arguments and Parameters is that "Every Value of Argument(s) from Function Call passing to Parameter(s) in function Definition". This Process is called Argument Passing Mechanism.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------			

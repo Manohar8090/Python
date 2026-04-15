@@ -1,0 +1,21 @@
+#Program for Demonstrating the Need of  Variable Length Arguments
+#PureVarLengthArgsEx3.py
+def disp(sno,sname, *kvr):  # here *kvr is called Variable Length args whose type is <class,tuple>
+	print("-"*50)
+	print("\tStudent  Number={}".format(sno))
+	print("\tStudent  Name={}".format(sname))
+	s=0
+	for val in kvr:
+		print("\t\t{}".format(val))
+		s+=val
+	print("\tSum={}".format(s))
+	print("-"*50)
+
+
+#main Program
+disp(100,"RS",10,20,30,40,50)
+disp(200,"TR",10,20,30,40) 
+disp(300,"DR",10,20,30) 
+disp(400,"SR",10,20) 
+disp(500,"MC",10) 
+disp(600,"SS")

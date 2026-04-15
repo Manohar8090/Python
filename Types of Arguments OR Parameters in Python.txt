@@ -1,0 +1,10 @@
+				================================================
+					Types of Arguments OR Parameters in Python
+				================================================
+=>Based on Passing the Arguments Values from Function Calls to Formal Parameters of Function Defintion, the Arguments are Classified into 5 Types. They are
+				1. Possitional Arguments
+				2. Default Arguments
+				3. Keyword Arguments
+				4. Variable Length Arguments
+				5. Keyword Variable Length Arguments
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

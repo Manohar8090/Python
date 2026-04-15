@@ -1,0 +1,60 @@
+				==========================================================
+							Functions in Python--Most IMP
+						Functions(9)------->Modules(1)-------->Packages(1)
+				==========================================================
+Index
+-------------------------------------------------------------------------
+=>Purpose of Functions
+=>Types of Languages
+		a) Un-Structured  Programming Lang
+		b) Structured  Programming Lang
+=>Advatnages of Functions
+=>Parts of Functions
+=>Phases in Functions
+=>Syntax for Defining Functions in Python
+=>Number of Approaches to Define Functions
+=>Programming Examples
+--------------------------------------------------------------------------
+=>Arguments and Parameters
+=>Types of  Arguments and Parameters
+		a) Possitional Arguments
+		b) Default Arguments
+		c) Keyword Arguments
+		d) Variable Length Arguments
+		e) Keyword Variable Length Arguments
+=>Programming Examples
+---------------------------------------------------------------------------
+=>Local and Global Variables
+=>Programming Examples
+=>global keyword
+=>Programming Examples
+=>globals() concept
+=>Programming Examples
+---------------------------------------------------------------------------
+=>Comprehensions
+		a) List Comprehension
+		b) Set Comprehension
+		c) Dict Comprehension
+		d) tuple Comprehension (not there)
+=>Programming Examples
+---------------------------------------------------------------------------
+=>Working with Anonymous Functions OR lambda Functions
+=>Implementation of Anonymous Functions OR lambda Functions
+=>Programming Examples
+---------------------------------------------------------------------------
+=>Special Functions in Python
+		a) filter() with Normal and Anonymous Functions
+		b) map() with Normal and Anonymous Functions
+		c) reduce()  with Normal and Anonymous Functions
+=>Programming Examples
+--------------------------------------------------------------------------------
+=>Advantaced Functions Concept in PYTHON
+		=>Decorators  Concept  @fucntionname-outer fucntion name
+			=>Programming Exampels
+		=>Closures Concept------nonlocal keyword
+			=>programming Examples
+		=>Generators Concept-----------yield keyword with Functions
+			=>Programming Examples
+		=>Iterators Concept----iter() with Iterable Objects
+			=>Programming Examples
+=============================================x============================================

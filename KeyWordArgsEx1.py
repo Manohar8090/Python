@@ -1,0 +1,14 @@
+#Program for  Demonstrating the Need of Key word Arguments
+#KeyWordArgsEx1.py
+def  disp(a,b,c,d):
+	print("\t{}\t{}\t{}\t{}".format(a,b,c,d))
+
+#Main Program
+print("-"*50)
+print("\tA\tB\tC\tD")
+print("-"*50)
+disp(10,20,30,40)# Function Call with Pos Args
+disp(c=30,a=10,d=40,b=20)  # Function Call with Keyword
+disp(d=40,a=10,b=20,c=30)  # Function Call with Keyword
+disp(10,20,d=40,c=30) # Function Call with Pos Args and Keyword args
+print("-"*50)

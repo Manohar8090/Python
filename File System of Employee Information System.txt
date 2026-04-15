@@ -1,0 +1,33 @@
+				=========================================================
+					Project Implementation--Pickling and un-Pickling
+				=========================================================
+			-----------------------------------------------------------------------------------------------
+					Employee Information System
+			-----------------------------------------------------------------------------------------------
+					1. Add New Employee
+					2. Delete Employee 
+					3. Update Employee
+					4. View Employee Details
+					5. View All Employee Deatils
+					6. Search Employee Details
+					7. Exit
+			-----------------------------------------------------------------------------------------------
+					Enter UR Choice:
+			------------------------------------------------------------------------------------------------
+File System
+------------------------------------
+1. EmpMenu.py<----File Name and Module Name---------
+	menu()
+2. EmployeeAdd.py<--File Name and Module Name--------
+	addemployee()
+3. EmployeeDelete.py<----File Name and Module Name---------------
+	deleteemployee()
+4. EmployeeUpdate.py<----File Name and Module Name---------------
+	updateemployee()
+5. EmployeeView.py<-----File Name and Module Name----------
+	viewemployee()
+	viewallemployee()-----------------
+6. EmployeeSearch.py<-----File Name and Module Name-----------
+	searchemployee()
+7. EmployeeMainProject.py<----Main Program--------------------------
+==============================================x=======================================
