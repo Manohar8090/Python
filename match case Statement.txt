@@ -1,0 +1,156 @@
+				=========================================================
+						4. match case Statement
+				=========================================================
+=>match case Statement is one of the new Feature available  from Python 3.10 Version Onwards.
+=>The Purpose of match case Statement is that "To Deal with Menu-Driven Applications".
+=>The Menu-Driven Applications are Nothing Pre-Designed Conditions. 
+=>Syntax :
+-----------------
+			match(Choice Expression):
+				case case-lable-1:
+						Block of Statements -1
+				case case-lable-2:
+						Block of Statements -2
+				------------------------
+				------------------------
+				case-lable-n:
+						Block of Statements -n
+				case _:
+					default block of Statements
+			-------------------------------------------------
+			Other Statements in Program
+			-------------------------------------------------
+----------------------
+Explanation:
+----------------------
+=>here "match" and "case" are the soft  keywords
+=>"Choice Expr" represents either int or str  or bool
+=>If "Choice Expr" is matching with "case label1" then PVM executes Block of Statements-1 and later executes Other statements in program.
+=>If "Choice Expr" is matching with "case label2" then PVM executes Block of Statements-2 and later executes Other statements in program.
+=>In General "Choice Expr" is trying to match with case label-1, case label-2,....case label-n then PVM executes corresponding block of statements and later executes Other statements in program.
+=>If "Choice Expr" is not matching with  any  of the specified case labels then PVM executes Default Block of Statements which are written under default case block(case _ ) and later executes Other statements in program.
+=>Writing default case block is optional and If we write then it must be written at last (Otherwise we get SyntaxError)
+=>When we represent multiple case labels under one case  for One Operation then those case labels must be combined with Bitwise OR Operator ( | )  .
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE: Code for Getting Python Key Words
+>>> import keyword as k
+>>> k.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>> len(k.kwlist)--------------35
+----------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE: Code for Getting Python Soft Key Words
+>>> k.softkwlist------------------- ['_', 'case', 'match', 'type']
+>>> len(k.softkwlist)--------------4
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Menu-Driven Applications Examples
+---------------------------------------------------------------------------------------------------------------------------------------------
+				==============================================
+						Arithmetic Operations
+				==============================================
+						1. Additions
+						2. Substraction
+						3. Multiplication
+						4. Division				here 1 2 3 4 5 6 7 8 are called Case labels--int--Unique
+						5. Floor Division
+						6. Modulo Division
+						7. Exponentiation
+						8. Exit
+			==============================================
+					Enter UR Choice: 5
+			==============================================
+				ch=int(input("Enter Ur Choice:")) # 12
+				match(ch):
+					case 1:
+						#Code for addition
+					case 2:
+						# Code for substraction
+					case 3:
+						# Code for Multiplication
+					case 4:
+						# Code for Div
+					case 5:
+						# Code for Floor Div
+					case 6:
+						# Code for Mod Div
+					case 7:
+						# Code for Exp
+					case 8:
+						# Code for Exit
+					case _:
+						print("Ur Selection of Operation is wrong-try again")
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Menu-Driven Applications Examples
+---------------------------------------------------------------------------------------------------------------------------------------------
+					==============================================
+							Areas of Different Figures
+					==============================================
+							C. Circle
+							R. Rect
+							S. Square		 Here C, R, S , T and E Case Labels--str
+							T. Triangle
+							E. Exit
+					==============================================
+						Enter UR Choice: R
+					==============================================
+						ch=input("Enter Ur Choice:") # c
+						match(ch):
+						     case "C" | "c":
+								# Code fo Circle Area
+						     case 'R'|'r':
+							        # Code fo Circle Rect
+						     case "S"|'s':
+								# Code for Square
+						     case "T"|'t':
+								# Code for Triangle
+						     case "E"|'e':
+								# Code for Exit
+						    case _:
+								print("Ur Selection of Operation is wrong-try again")			
+			
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Menu-Driven Applications Examples
+---------------------------------------------------------------------------------------------------------------------------------------------
+					==============================================
+							Temp Conversion Calculators
+					==============================================
+							1. C to F
+							2. C to K
+							3. F to C
+							4. F to K
+							5. K to F
+							6. K to C
+							7. Exit
+					==============================================
+						Enter UR Choice: 2
+					==============================================
+1. Celsius to Fahrenheit: F = C*(9/5) + 32
+2. Celsius to Kelvin: K = C + 273.15
+3. Fahrenheit to Celcius: C = (F-32)*(5/9)
+4. Fahrenheit to Kelvin: K = (F-32)* (5/9) + 273.15
+5. Kelvin to Fahrenheit: F = (K-273.15) (9/5) + 32
+6. Kelvin to Celcius: C = K - 273.15
+---------------------------------------------------------------------------------------------------------------------------------------------
+*******************************************************
+					Base Conversion Calculator
+				*******************************************************
+					I.  Dec to Binary------------> bin()
+					     Dec to Octal-------------> oct()
+					     Dec to Hexa-------------->Hex()
+
+					II. Binary to Dec------------>Automatic
+                                             Binary to Oct------------>oct()
+					     Binary to Hexa---------->hex()
+					
+					III. Octal to Dec------------->Automatic
+					      Octal to Binary---------->bin()
+					      Octal to Hexa------------>hex()
+
+					 IV. Hexa to Dec-------------->Automatic
+						Hexa to Binary---------->bin()
+						Hexa to Octal------------>oct()
+				*******************************************************
+						Enter Ur Choice: 
+				***********************************************************

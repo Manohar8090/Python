@@ -1,0 +1,102 @@
+					===================================================
+								 1. list
+					===================================================
+Index
+-----------------------------------------
+=>Purpose of List
+=>Notations of List
+=>Synatx for Storing the Data in List Object
+=>Memory Management of List
+		i) +Ve Index
+		ii) -VE Index
+=>Operations on List
+		i) Indexing Operations
+		ii) Slicing Operations
+=>Types of List objects
+		i) Empty List
+		ii) Non-Empty list
+=>Pre-Defined Functions in List--Most Imp
+=>Programming Examples
+=>Nested List OR Inner List
+=>Pre-Defined Functions in Inner List
+=>Programming Examples
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Properties of List
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Here 'list' is one of the Pre-Defined Class and Treated as List Data type.
+=>The Purspose of 'list' data type is that To store Multiple Value either of same Type OR Different Type OR Both the Types in Single Object with Unique Value OR Duplicate Values.
+=>The Symbolic Notation for storing List data is Square Brackets. In Otherwords, The Elements of List Must be stored 
+     within Square Brackets [] and values Must be Separated by comma.
+				varname=[Val1,Val2,....,Val-n]
+=>An Object of List maintains Insertion Order.
+=>On the Object List we can Perform  Both Indexing and Slice Based Operations.
+=>An Object of List belongs to MUTABLE bcoz list object allows us to perform Item Assignment (adding, removing, 
+    updating..etc)
+=>By using list class, we can create Two List Objects. They are
+					1. Empty List
+					2. Non-Empty List
+---------------------------------------------------
+1. Empty List
+---------------------------------------------------
+=>An Empty List is One, which does not Contain any Elements and whose length is 0.
+=>Syntax-1:      varname=[]
+=>Syntax-2:	    varname=list()
+---------------------------------------------------
+2. Non-Empty List
+---------------------------------------------------
+=>A Non-Empty List is One, which Contains Elements and whose length is >0.
+=>Syntax-1:  varname=[Val1,Val2,....,Val-n]
+=>Syntax-2:  varname=list(Iterable-Object)
+=>Syntax-3:  varname=list([Iterable-Object])
+=>Syntax-4:  varname=list([Non-Iterable-Object])
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> lst1=[10,123,890,0,-45,12,45,67,10,20]
+>>> print(lst1,type(lst1))-----------[10, 123, 890, 0, -45, 12, 45, 67, 10, 20] <class 'list'>
+>>> lst2=[100,"Rossum",45.67,True,2+3j]
+>>> print(lst2,type(lst2))------------[100, 'Rossum', 45.67, True, (2+3j)] <class 'list'>
+-------------------------------------
+>>> lst2=[100,"Rossum",45.67,True,2+3j]
+>>> print(lst2,type(lst2),id(lst2))--------[100, 'Rossum', 45.67, True, (2+3j)] <class 'list'> 2703672213376
+>>> lst2[0]-------------------------------------100
+>>> lst2[1]-------------------------------------'Rossum'
+>>> lst2[-1]------------------------------------(2+3j)
+>>> lst2[0:3]-----------------------------------[100, 'Rossum', 45.67]
+>>> lst2[0]=150 # Index Based Modification
+>>> print(lst2,type(lst2),id(lst2))----------------------[150, 'Rossum', 45.67, True, (2+3j)] <class 'list'> 2703672213376
+>>> lst2[-2:]=[False,2.5+5.6j] # Slice Based Modification
+>>> print(lst2,type(lst2),id(lst2))----------------------[150, 'Rossum', 45.67, False, (2.5+5.6j)] <class 'list'> 2703672213376
+---------------------------------------------------------------------------------
+>>> lst1=[]
+>>> print(lst1,type(lst1))---------------[] <class 'list'>
+>>> len(lst1)-------------------------------0
+		OR
+>>> lst2=list()
+>>> print(lst2,type(lst2))--------------[] <class 'list'>
+>>> len(lst2)------------------------------0
+>>> lst1=[10,20,10,20,30]
+>>> print(lst1,type(lst1))-------------------[10, 20, 10, 20, 30] <class 'list'>
+>>> len(lst1)-------------------------------5
+----------------------------------------------------------
+>>> s="MISSISSIPPI"
+>>> print(s,type(s))---------------MISSISSIPPI <class 'str'>
+>>> lst=list(s)
+>>> print(lst,type(lst))------------['M', 'I', 'S', 'S', 'I', 'S', 'S', 'I', 'P', 'P', 'I'] <class 'list'>
+---------------------------------------
+>>> s="MISSISSIPPI"
+>>> lst1=list([s])
+>>> print(lst1,type(lst1))-----------['MISSISSIPPI'] <class 'list'>
+------------------------------------------------------------
+>>> a=10
+>>> print(a,type(a))--------------10 <class 'int'>
+>>> lst=list(a)----------------------TypeError: 'int' object is not iterable
+-------------To Remove above Error-------
+>>> lst=list([a])
+>>> print(lst,type(lst))--------------------[10] <class 'list'>
+>>> a=1.2
+>>> print(a,type(a))--------------1.2 <class 'float'>
+>>> lst=list([a])
+>>> print(lst,type(lst))-----------[1.2] <class 'list'>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+

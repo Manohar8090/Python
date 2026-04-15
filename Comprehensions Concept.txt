@@ -1,0 +1,16 @@
+				=======================================================
+						Comprehensions Concept
+				=======================================================
+=>The purpose of Comprehensions Concept is that "To Define OR Develop  Precise OR Concise Code ".
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Syntax-1:     VarName1=[ Expr1    for VarName  in Iterable-Object  if Test Cond  ]  # List Comprehension
+
+Syntax-2:     VarName1=[ Expr1    for VarName  in Iterable-Object  ]  # List Comprehension
+
+Syntax-3:    VarName1={ Expr1    for VarName  in Iterable-Object  if Test Cond  }  # Set Comprehension
+Syntax-4:    VarName1={ Expr1    for VarName  in Iterable-Object  }  # Set Comprehension
+
+Syntax-5: VarName1={ Expr1:Expr2    for VarName  in Iterable-Object  if Test Cond  }  # Dict Comprehension
+Syntax-6  VarName1={ Expr1:Expr2    for VarName  in Iterable-Object  }  # Dict Comprehension
+----------------------------------------------------------------------------------------------------------------------------------------------------------

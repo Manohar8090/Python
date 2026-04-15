@@ -1,0 +1,50 @@
+				=======================================================
+						3. bool
+				=======================================================
+=>Here 'bool' is one of the Pre-Defined Class and treated as Fundamental data type.
+=>The Purpose of bool data type is that "To Store True , False (Logical Values)".
+=>Programtically, True , False are the Keywords and treated as bool data type Values.
+=>Internally The True  is Considered as 1 and False Considered as 0.
+=>On Bool values, we can Perform Boolean Arimetic Operations.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> False=30---------------SyntaxError: cannot assign to False
+>>> True=45---------------SyntaxError: cannot assign to True
+-----------------------------------------
+>>> a=True
+>>> b=False
+>>> print(a,type(a))------------True <class 'bool'>
+>>> print(b,type(b))------------False <class 'bool'>
+-----------------------------------------
+>>> a=false-----------------------NameError: name 'false' is not defined
+>>> b=true------------------------NameError: name 'true' is not defined
+--------------------------------------------
+>>> print(True+False)------------1
+>>> print(False+False)-----------0
+>>> print(True+True)------------2
+>>> print(True-True)------------0
+>>> print(0b0111+True-2)-----6
+>>> print(True+3*2)-------------7
+>>> print(0xF-True)------------14
+-------------------------------------------- ---- Most imp
+>>> print(True/True)----------------1.0
+>>> print(True/False)---------------------ZeroDivisionError: division by zero
+>>> print(False/False)--------------------ZeroDivisionError: division by zero
+>>> print(False/True)--------------------0.0
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

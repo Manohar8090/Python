@@ -1,0 +1,309 @@
+				======================================================
+							Nested OR Inner Dict
+								OR
+					Combinations of Dict with List,Tuple and Set
+				======================================================
+======================================
+Dict in Dict --POSSIBLE
+======================================
+Example
+-------------
+>>> d={"sno":100,"name":"RS","mem":{"CM":20,"C++":18},"em":{"CM":70,"C++":80},"ColName":"OU"}
+>>> print(d,type(d))
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18}, 'em': {'CM': 70, 'C++': 80}, 'ColName': 'OU'} <class 'dict'>
+>>> for k,v in d.items():
+...     print(k,"-->",v,"-->",type(v),"-->",type(d))
+...
+		sno --> 100 --> <class 'int'> --> <class 'dict'>
+		name --> RS --> <class 'str'> --> <class 'dict'>
+		mem --> {'CM': 20, 'C++': 18} --> <class 'dict'> --> <class 'dict'>
+		em --> {'CM': 70, 'C++': 80} --> <class 'dict'> --> <class 'dict'>
+		ColName --> OU --> <class 'str'> --> <class 'dict'>
+>>> d["mem"]------------------------{'CM': 20, 'C++': 18}
+>>> d.get("mem")-------------------{'CM': 20, 'C++': 18}
+>>> for k,v in d["mem"].items():
+...		print(k,v)
+...
+			CM 20
+			C++ 18
+>>> for k,v in d.get("mem").items():
+...		print(k,v)
+...
+			CM 20
+			C++ 18
+>>> for k in d.get("em"):
+...		print(k,d.get("em")[k])
+...
+			CM 70
+			C++ 80
+>>> for k in d.get("em"):
+...		print(k,d["em"][k])
+...
+			CM 70
+			C++ 80
+---------------------------------------------------------------
+>>> d={"sno":100,"name":"RS","mem":{"CM":20,"C++":18},"em":{"CM":70,"C++":80},"ColName":"OU"}
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18}, 'em': {'CM': 70, 'C++': 80}, 'ColName': 'OU'}
+>>> d["mem"]["PM"]=19
+>>> d.get("em")["PM"]=70
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'C++': 80, 'PM': 70}, 'ColName': 'OU'}
+---------------------------------------------------------------
+>>> d["BM"]={"CM":1.2,"C++":2.3,"PM":1.5}
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'C++': 80, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+---------------------------------------------------------
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'C++': 80, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+>>> d["mem"]["CM"]+d["em"]["CM"]+d["BM"]["CM"]
+91.2
+>>> d["mem"].get("C++")+d["em"].get("C++")+d["BM"].get("C++")
+100.3
+>>> d.get("mem").get("PM")+d.get("em").get("PM")+d.get("BM").get("PM")
+90.5
+>>> #totm:{tcm:91.2,tcpp:100.3,tpm:90.5}
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'C++': 80, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+>>> d["totm"]={"tcm":d["mem"]["CM"]+d["em"]["CM"]+d["BM"]["CM"],"tcpp":d["mem"].get("C++")+d[\"em"].get("C++")+d["BM"].get("C++"),"tpm":d.get("mem").get("PM")+d.get("em").get("PM")+d.get(\"BM").get("PM") }
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'CM': 20, 'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'C++': 80, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}, 'totm': {'tcm': 91.2, 'tcpp': 100.3, 'tpm': 90.5}}
+
+>>> for k,v in d.items():
+...     print(k,"--->",v)
+...
+sno ---> 100
+name ---> RS
+mem ---> {'CM': 20, 'C++': 18, 'PM': 19}
+em ---> {'CM': 70, 'C++': 80, 'PM': 70}
+ColName ---> OU
+BM ---> {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}
+totm ---> {'tcm': 91.2, 'tcpp': 100.3, 'tpm': 90.5}
+----------------------------------------------------------------------------
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}, 'totm': {'tcpp': 100.3, 'tpm': 90.5}}
+>>> for k in d["BM"].keys():
+...		print(k)
+...
+		CM
+		C++
+		PM
+>>> d.popitem()-------------('totm', {'tcpp': 100.3, 'tpm': 90.5})
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'C++': 18, 'PM': 19}, 'em': {'CM': 70, 'PM': 70}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+>>> d["em"].clear()
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'C++': 18, 'PM': 19}, 'em': {}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+-------------------------------
+>>> d.get("mem")["PM"]=d.get("mem")["PM"]+(d.get("mem")["PM"])*(10/100)
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'C++': 18, 'PM': 20.9}, 'em': {}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+>>> d["mem"]["C++"]=25
+>>> print(d)
+{'sno': 100, 'name': 'RS', 'mem': {'C++': 25, 'PM': 20.9}, 'em': {}, 'ColName': 'OU', 'BM': {'CM': 1.2, 'C++': 2.3, 'PM': 1.5}}
+========================================================================
+List in Dict--POSSIBLE
+=================================
+>>> d={"sno":10,"name":"RS","me":[20,18,25],"em":[80,67,78],"cname":"OU"}
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [20, 18, 25], 'em': [80, 67, 78], 'cname': 'OU'}
+>>> for k,v in d.items():
+...     print(k,"-->",v,"--->",type(v),"-->",type(d))
+...
+		sno --> 10 ---> <class 'int'> --> <class 'dict'>
+		name --> RS ---> <class 'str'> --> <class 'dict'>
+		me --> [20, 18, 25] ---> <class 'list'> --> <class 'dict'>
+		em --> [80, 67, 78] ---> <class 'list'> --> <class 'dict'>
+		cname --> OU ---> <class 'str'> --> <class 'dict'>
+-----------------------------------       
+>>> d.get("me").append(22)
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [20, 18, 25, 22], 'em': [80, 67, 78], 'cname': 'OU'}
+>>> d["em"].insert(1,72)
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [20, 18, 25, 22], 'em': [80, 72, 67, 78], 'cname': 'OU'}
+>>> d.get("me").sort()
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [18, 20, 22, 25], 'em': [80, 72, 67, 78], 'cname': 'OU'}
+>>> d["em"].sort(reverse=True)
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [18, 20, 22, 25], 'em': [80, 78, 72, 67], 'cname': 'OU'}
+>>> del d["me"][::2]
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [20, 25], 'em': [80, 78, 72, 67], 'cname': 'OU'}
+>>> del d.get("em")[1:]
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': [20, 25], 'em': [80], 'cname': 'OU'}
+>>> d.pop("me")
+[20, 25]
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'em': [80], 'cname': 'OU'}
+>>> d["me"]=[20,25,12]
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'em': [80], 'cname': 'OU', 'me': [20, 25, 12]}
+>>> del d["em"]
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'cname': 'OU', 'me': [20, 25, 12]}
+========================================================================
+Tuple in Dict
+=================================
+>>> d={"sno":10,"name":"RS","me":(20,18,25),"em":(80,67,78),"cname":"OU"}
+>>> for k,v in d.items():
+...		print(k,"-->",v,"--->",type(v),"-->",type(d))
+...
+		sno --> 10 ---> <class 'int'> --> <class 'dict'>
+		name --> RS ---> <class 'str'> --> <class 'dict'>
+		me --> (20, 18, 25) ---> <class 'tuple'> --> <class 'dict'>
+		em --> (80, 67, 78) ---> <class 'tuple'> --> <class 'dict'>
+		cname --> OU ---> <class 'str'> --> <class 'dict'>
+>>> d.get("em")[1:]--------------(67, 78)
+>>> d["me"][::2]-----------------(20, 25)
+>>> d.get("me").count(18)----------1
+>>> d.get("me").count(108)---------0
+>>> sorted(d["me"])-------------------[18, 20, 25]
+>>> tuple(sorted(d["me"]))----------(18, 20, 25)
+>>> d["me"]=tuple(sorted(d["me"]))
+>>> print(d)---{'sno': 10, 'name': 'RS', 'me': (18, 20, 25), 'em': (80, 67, 78), 'cname': 'OU'}
+>>> d["em"]=tuple(sorted(d.get("em"))[::-1])
+>>> print(d)---{'sno': 10, 'name': 'RS', 'me': (18, 20, 25), 'em': (80, 78, 67), 'cname': 'OU'}
+========================================================================
+Set  in Dict-------------POSSIBLE
+=================================
+>>> d={"sno":10,"name":"RS","me":{20,18,25},"em":{80,67,78},"cname":"OU"}
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': {25, 18, 20}, 'em': {80, 67, 78}, 'cname': 'OU'}
+>>> for k,v in d.items():
+...     print(k,"-->",v,"--->",type(v),"-->",type(d))
+...
+sno --> 10 ---> <class 'int'> --> <class 'dict'>
+name --> RS ---> <class 'str'> --> <class 'dict'>
+me --> {25, 18, 20} ---> <class 'set'> --> <class 'dict'>
+em --> {80, 67, 78} ---> <class 'set'> --> <class 'dict'>
+cname --> OU ---> <class 'str'> --> <class 'dict'>
+>>> d.get("me").add(14)
+>>> d.get("em").add(49)
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': {25, 18, 20, 14}, 'em': {80, 49, 67, 78}, 'cname': 'OU'}
+>>> d["allmarks"]=d["me"].union(d.get("em"))
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': {25, 18, 20, 14}, 'em': {80, 49, 67, 78}, 'cname': 'OU', 'allmarks': {67, 14, 78, 80, 49, 18, 20, 25}}
+>>> d.get("allmarks").remove(49)
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': {25, 18, 20, 14}, 'em': {80, 49, 67, 78}, 'cname': 'OU', 'allmarks': {67, 14, 78, 80, 18, 20, 25}}
+>>> d.popitem()
+('allmarks', {67, 14, 78, 80, 18, 20, 25})
+>>> print(d)
+{'sno': 10, 'name': 'RS', 'me': {25, 18, 20, 14}, 'em': {80, 49, 67, 78}, 'cname': 'OU'}
+====================================================================================
+Dict in List------------POSSIBLE
+============================
+>>> lst=[10,"RS",{"CM":20,"CPPM":18,"PM":17},"JNTU"]
+>>> print(lst,type(lst))
+[10, 'RS', {'CM': 20, 'CPPM': 18, 'PM': 17}, 'JNTU'] <class 'list'>
+>>> for val in lst:
+...     print(val,"-->",type(val),"-->",type(lst))
+...
+10 --> <class 'int'> --> <class 'list'>
+RS --> <class 'str'> --> <class 'list'>
+{'CM': 20, 'CPPM': 18, 'PM': 17} --> <class 'dict'> --> <class 'list'>
+JNTU --> <class 'str'> --> <class 'list'>
+>>> lst[2].get("CM")+lst[2]["CPPM"]+lst[-2]["PM"]
+55
+>>> lst[2]["TOT"]=lst[2].get("CM")+lst[2]["CPPM"]+lst[-2]["PM"]
+>>> print(lst,type(lst))
+[10, 'RS', {'CM': 20, 'CPPM': 18, 'PM': 17, 'TOT': 55}, 'JNTU'] <class 'list'>
+>>> lst[2]
+{'CM': 20, 'CPPM': 18, 'PM': 17, 'TOT': 55}
+>>> lst[2].pop("PM")
+17
+>>> print(lst,type(lst))
+[10, 'RS', {'CM': 20, 'CPPM': 18, 'TOT': 55}, 'JNTU'] <class 'list'>
+>>> lst.insert(-1,{"TS":"HYD","KAR":"BANG"})
+>>> print(lst,type(lst))
+[10, 'RS', {'CM': 20, 'CPPM': 18, 'TOT': 55}, {'TS': 'HYD', 'KAR': 'BANG'}, 'JNTU'] <class 'list'>
+>>> del lst[2:4]
+>>> print(lst,type(lst))
+[10, 'RS', 'JNTU'] <class 'list'>
+============================================================================
+Dict in Tuple---POSSIBLE
+===========================
+>>> tpl=(10,"RS",{"CM":20,"CPPM":18,"PM":17},"JNTU")
+>>> print(tpl,type(tpl))
+(10, 'RS', {'CM': 20, 'CPPM': 18, 'PM': 17}, 'JNTU') <class 'tuple'>
+>>> for val in tpl:
+...     print(val,"-->",type(val),"-->",type(tpl))
+...
+10 --> <class 'int'> --> <class 'tuple'>
+RS --> <class 'str'> --> <class 'tuple'>
+{'CM': 20, 'CPPM': 18, 'PM': 17} --> <class 'dict'> --> <class 'tuple'>
+JNTU --> <class 'str'> --> <class 'tuple'>
+>>> tpl[2]
+{'CM': 20, 'CPPM': 18, 'PM': 17}
+>>> tpl[2].pop("CPPM")
+18
+>>> print(tpl,type(tpl))
+(10, 'RS', {'CM': 20, 'PM': 17}, 'JNTU') <class 'tuple'>
+>>> tpl[-2]["OS"]=19
+>>> print(tpl,type(tpl))
+(10, 'RS', {'CM': 20, 'PM': 17, 'OS': 19}, 'JNTU') <class 'tuple'>
+>>> tpl[2:]
+({'CM': 20, 'PM': 17, 'OS': 19}, 'JNTU')
+===================================================================
+Dict in Set--Not Possible
+===========================
+>>> s1={10,"RS",{"CM":20,"CPPM":18,"PM":17},"JNTU"}-----------TypeError: unhashable type: 'dict'
+=======================================x==================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

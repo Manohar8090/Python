@@ -1,0 +1,24 @@
+				=========================================================
+						Reading the Data Dynamically From Key Board
+									OR
+							Input Statements in Python
+				=========================================================
+=>To Read the Data OR Input Dynamically From Key Board, we use Two Pre-Defined Functions present in module (builtins-default module). They are
+					1. input()
+					2. input(Message)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.input()
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:    LHSvarname=input()
+----------
+=>This Function is used for Reading Any Type of data from Key Board in the form of <class,str> and placed that values in LHS varname and whose type is <class, str>
+=>To Convert str value into Our Own Value , we use Type Casting Functions. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.input(Message)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:    LHSvarname=input(Message)
+----------
+=>Here 'Message' Represents User-Prompting Message.
+=>This Function is used for Reading Any Type of data from Key Board in the form of <class,str> and placed that values in LHS varname and whose type is <class, str> along with that It also Gives User-Prompting Message.
+=>To Convert str value into Our Own Value , we use Type Casting Functions. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------

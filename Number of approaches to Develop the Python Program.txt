@@ -1,0 +1,118 @@
+			=======================================================================
+					Number of approaches to Develop the Python Program
+			=======================================================================
+----------------------------------------------------
+What is Program and its Purpose
+----------------------------------------------------
+=>A Program is a Collection of 'Optimized Instructions' Meant for Performing Certain Operation.
+=>The 'Optimized Instructions' are having two Properties. 
+				1. Less Time Complexity ( Amount of Time Taken by Processor to execute the program) 
+				2. Less Space complexity ( Amount of Space Taken by the Program in main memory during execution)
+=>In real time, after writing the Program, The Programmer Must save the Program on some File Name with an extension .py (File Name.py---Source Code).
+NOTE: When we touch some thing on touch screen OR some thing u clicked on Browser then Internally Some Piece of Code (Program) will execute. 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Real Time Python Program / Application can be developed in Two ways. They are
+				1. By using Interactive Approach
+				2. By using Batch Mode Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. By using Interactive Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Interactive Approach, The python Programmer Can Issue/Write One Instruction at a time and gets One output at a time.
+=>The Interactive Approach is Useful To test One Instruction at a time.
+=>The Interactive Approach is not Useful to Write group of Instructions for Solving Big Problems bcoz It is Not Possible Re-Use the Code in Other Part of the Project and more over It is not Permitting to save the code. To avoid this limitation, we must go for Batch Mode Approach.
+--------------------------------------
+Code in Python Command
+--------------------------------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print(a)---------------10
+>>> print(b)---------------20
+>>> print(c)---------------30
+---------------------------
+Example Softwares:			
+---------------------------
+					1. Python Command Prompt
+					2. Python IDLE Shell
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. By using Batch  Mode Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Batch  Mode Approach, The Python Programmer develops Group of Optmized Instructions for solving  any Problem 
+    and saved on some file name with an extension .py(File Name.py----contains Source Code).
+=>In real Time, we use always Batch  Mode Approach for solving any Problem  bcoz We can Re-Use the code any Part of 
+    Project .
+-------------------------
+Example Code
+------------------------
+	sumex.py<---File Name
+-----------------------------------
+	a=10
+	b=20
+	c=a+b
+	print(a)
+	print(b)
+	print(c)
+---------------------------------------------------------------------------------------------
+Example Softwares-1 (Not Recommended to use in Real Time )
+---------------------------------------------------------------------------------------------
+				1. Python IDLE Shell
+---------------------------------------------------------------------------------------------
+Example Softwares-2 --Python Real Time IDEs ( Recommended to use in Real Time )
+---------------------------------------------------------------------------------------------
+				1. Pycharm
+				2. Anakonda Jupiter Note Book
+				3. Anakonda Spider
+				4. Anakonda Navigator
+				5. Google Colab
+				6. VS Code
+				7. Sub Lime Text.......etc
+------------------------------------------------------------------------------------------------------------------
+NOTE: To run the Python Programs  from  Windows Command, we use Two tools. they are
+			1. python
+			2. py
+=>These Tools are present  C:\Users\KVR\AppData\Local\Programs\Python\Python313
+
+=>Syntax-1:      E:\KVR-PYTHON-9AM\BATCH MODE> python FileName.py
+							OR
+=>Syntax-2:      E:\KVR-PYTHON-9AM\BATCH MODE> py  FileName.py
+------------------------------------------------------------------------------------------------------------------------------
+Examples
+------------------------------------------------------------------------------------------------------------------------------
+E:\KVR-PYTHON-9AM\BATCH MODE>python MulEx.py
+Enter First Value:3
+Enter Second Value:1.2
+**************************************************
+Val of a=3.0
+Val of b=1.2
+mul(3.0,1.2)=3.5999999999999996
+**************************************************
+
+E:\KVR-PYTHON-9AM\BATCH MODE>python MulEx.py
+Enter First Value:4
+Enter Second Value:4.5
+**************************************************
+Val of a=4.0
+Val of b=4.5
+mul(4.0,4.5)=18.0
+**************************************************
+
+E:\KVR-PYTHON-9AM\BATCH MODE>py SumEx3.py
+Enter First Value:2.3
+Enter Second Value:4.5
+**************************************************
+Val of a=2.3
+Val of b=4.5
+sum(2.3,4.5)=6.8
+**************************************************
+
+E:\KVR-PYTHON-9AM\BATCH MODE>py SumEx2.py
+--------------------------------------------------
+Val of a= 100
+Val of b= 200
+Sum= 300
+************************************************************
+E:\KVR-PYTHON-9AM\BATCH MODE>py SumEx1.py
+100
+200
+300
+------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,272 @@
+				======================================================
+						Pre-Defined Functions in Dict
+				======================================================
+=>We know that on the object of Dict, we can perform the following Operations.
+			1. We get the value of Value by passing Value of Key
+			2. We can Modify the Old value of Value by passing Exist Value of Key
+			3. We can add (Key,Value) to Dict Object.
+=>To Perform Additional Operations along with the above Operations, we use the Pre-Defined Functions Present in Dict    Object.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. clear()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   dictobj.clear()
+=>This Function is used for Removing all the values from Dict Object
+=>When we call this Function on empty dict object then we get Space OR None as Result
+--------------------------
+Examples
+--------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1,type(d1),id(d1))------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972371904
+>>> len(d1)-----------------------------------4
+>>> d1.clear()
+>>> print(d1,type(d1),id(d1))-------------{} <class 'dict'> 2284972371904
+>>> len(d1)------------------------------------0
+>>> print(d1.clear())-----------------None
+>>> print({}.clear())------------------None
+>>> print(dict().clear())------------None
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. pop()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax: DictObj.pop(Key)
+=>This Function is used for Removing the (Key,value) from dict object by passing the Value of Key.
+=>If the Value of Key Does not Exist then we get KeyError.
+-----------------------------
+Examples
+-----------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1,type(d1),id(d1))--------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972372160
+>>> d1.pop(20)--------------------------------2.2
+>>> print(d1,type(d1),id(d1))-------------{10: 1.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972372160
+>>> d1.pop(30)-------------------------------2.3
+>>> print(d1,type(d1),id(d1))------------{10: 1.2, 40: 4.4} <class 'dict'> 2284972372160
+>>> d1.pop(40)------------------------------4.4
+>>> print(d1,type(d1),id(d1))-------------{10: 1.2} <class 'dict'> 2284972372160
+>>> d1.pop(30)-------------------------------KeyError: 30
+>>> {}.pop(10)--------------------------------KeyError: 10
+>>> dict().pop(20)---------------------------KeyError: 20
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. popitem()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   DictObj.popitem()
+=>This Function is used for Removing Last (Key,value) from Dict Object
+=>When we call this Function on empty dict object then we get KeyError.
+-------------------------------
+Examples
+-------------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1,type(d1),id(d1))-------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972369920
+>>> d1.popitem()----------------------------(40, 4.4)
+>>> print(d1,type(d1),id(d1))-------------{10: 1.2, 20: 2.2, 30: 2.3} <class 'dict'> 2284972369920
+>>> d1.popitem()----------------------------(30, 2.3)
+>>> print(d1,type(d1),id(d1))-------------{10: 1.2, 20: 2.2} <class 'dict'> 2284972369920
+>>> d1.popitem()----------------------------(20, 2.2)
+>>> print(d1,type(d1),id(d1))---------------{10: 1.2} <class 'dict'> 2284972369920
+>>> d1.popitem()-----------------------------(10, 1.2)
+>>> print(d1,type(d1),id(d1))---------------{} <class 'dict'> 2284972369920
+>>> d1.popitem()------------------------------KeyError: 'popitem(): dictionary is empty'
+>>> {}.popitem()-------------------------------KeyError: 'popitem(): dictionary is empty'
+>>> dict().popitem()-------------------------KeyError: 'popitem(): dictionary is empty'
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. copy()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   DictObj2=DictObj1.copy()
+=>This Function is used for Copying the content of DictObj1 into Another Dict Obj2 (Implements Shallow Copy).
+-------------------------------
+Examples
+-------------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1,type(d1),id(d1))------------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972372608
+>>> d2=d1.copy() # Shallow Copy
+>>> print(d2,type(d2),id(d2))------------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972600576
+>>> d1[10]=12.3
+>>> d2[40]=14.4
+>>> print(d1,type(d1),id(d1))------------------{10: 12.3, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972372608
+>>> print(d2,type(d2),id(d2))------------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 14.4} <class 'dict'> 2284972600576
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. get()----Most IMP
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:   varname=dictobj.get(Key)
+=>This Function is used for Obtaining the Value of Value by passing the Value of Key.
+=>If the Value of Key does not Exist then get() returns None.
+					OR
+	Syntax:   DictObj[Key]
+		Here If the Value of Key Exist then we get Value of Value otherwise we get KeyError
+------------------------
+Examples
+------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1,type(d1),id(d1))-----------------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4} <class 'dict'> 2284972364224
+>>> val=d1.get(10)
+>>> print(val)-------------------------------------------1.2
+>>> val=d1.get(20)
+>>> print(val)-------------------------------------------2.2
+>>> val=d1.get(200)
+>>> print(val)-------------------------------------------None
+>>> statescaps={"TS":"HYD","AP":"VIJ","KAR":"BANG","MH":"MUM"}
+>>> print(statescaps)----------------------{'TS': 'HYD', 'AP': 'VIJ', 'KAR': 'BANG', 'MH': 'MUM'}
+>>> cap=statescaps.get("TS")
+>>> print(cap)--------------------------------HYD
+>>> cap=statescaps.get("KAR")
+>>> print(cap)-------------------------------BANG
+>>> cap=statescaps.get("AMPT")
+>>> print(cap)------------------------------None
+>>> print({}.get(10))---------------------None
+-----------------------OR-------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> d1[10]-----------------1.2
+>>> d1[40]-----------------4.4
+>>> d1[400]----------------KeyError: 400
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. keys()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    varname=DictObj.keys()
+=>This Function is used for Obtaining Values of Key and place the Values of Key in LHS Varname and whose Type is <class, 'dict_keys'>
+------------------------
+Examples
+------------------------
+>>> statescaps={"TS":"HYD","AP":"VIJ","KAR":"BANG","MH":"MUM"}
+>>> print(statescaps)-----------------{'TS': 'HYD', 'AP': 'VIJ', 'KAR': 'BANG', 'MH': 'MUM'}
+>>> states=statescaps.keys()
+>>> print(states,type(states))----------------dict_keys(['TS', 'AP', 'KAR', 'MH']) <class 'dict_keys'>
+>>> for k in states:
+...		print(k)
+...
+			TS
+			AP
+			KAR
+			MH
+>>> for k in statescaps.keys():
+...		print(k)
+...
+		TS
+		AP
+		KAR
+		MH
+>>> for k in  {10:"Apple",20:"Mango",30:"Kiwi"}.keys():
+...		print(k)
+...
+		10
+		20
+		30
+-------------------------
+>>> statescaps={"TS":"HYD","AP":"VIJ","KAR":"BANG","MH":"MUM"}
+>>> for de in enumerate(statescaps):
+...		print(de)
+...
+		(0, 'TS')
+		(1, 'AP')
+		(2, 'KAR')
+		(3, 'MH')
+>>> for de in enumerate(statescaps):
+...		print(de,"-->",statescaps[de[1]])
+
+		(0, 'TS') --> HYD
+		(1, 'AP') --> VIJ
+		(2, 'KAR') --> BANG
+		(3, 'MH') --> MUM
+>>> for de in enumerate(statescaps):
+...		print(de,"-->",statescaps.get(de[1]))
+...
+		(0, 'TS') --> HYD
+		(1, 'AP') --> VIJ
+		(2, 'KAR') --> BANG
+		(3, 'MH') --> MUM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. values()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    varname=DictObj.values()
+=>This Function is used for Obtaining Values of Value and place the Values of Values in LHS Varname and whose Type is <class, 'dict_values'>
+------------------------------
+Examples
+------------------------------
+>>> statescaps={"TS":"HYD","AP":"VIJ","KAR":"BANG","MH":"MUM"}
+>>> print(statescaps)------------------{'TS': 'HYD', 'AP': 'VIJ', 'KAR': 'BANG', 'MH': 'MUM'}
+>>> caps=statescaps.values()
+>>> print(caps,type(caps))----------------dict_values(['HYD', 'VIJ', 'BANG', 'MUM']) <class 'dict_values'>
+>>> for v in caps:
+...		print(v)
+...
+		HYD
+		VIJ
+		BANG
+		MUM
+>>> for v in statescaps.values():
+...		print(v)
+...
+			HYD
+			VIJ
+			BANG
+			MUM
+>>> for v in {'TS': 'HYD', 'AP': 'VIJ', 'KAR': 'BANG', 'MH': 'MUM'}.values():
+...			print(v)
+...
+			HYD
+			VIJ
+			BANG
+			MUM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. items()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    varname=DictObj.items()
+=>This Function is used for Obtaining (Key,Value) and place the (Key,Value) in LHS Varname and whose Type is <class, 'dict_items'>
+---------------------------
+Examples
+---------------------------
+>>> d1={10:1.2,20:2.2,30:2.3,40:4.4}
+>>> print(d1)--------------------{10: 1.2, 20: 2.2, 30: 2.3, 40: 4.4}
+>>> kvs=d1.items()
+>>> print(kvs,type(kvs))--------dict_items([(10, 1.2), (20, 2.2), (30, 2.3), (40, 4.4)]) <class 'dict_items'>
+>>> for kv in kvs:
+...		print(kv)
+...
+		(10, 1.2)
+		(20, 2.2)
+		(30, 2.3)
+		(40, 4.4)
+>>> for kv in kvs:
+...		print(kv[0],"-->",kv[1])
+...
+		10 --> 1.2
+		20 --> 2.2
+		30 --> 2.3
+		40 --> 4.4
+>>> for kv in d1.items():
+...		print(kv[0],"-->",kv[1])
+...
+		10 --> 1.2
+		20 --> 2.2
+		30 --> 2.3
+		40 --> 4.4
+>>> for k,v in d1.items():
+...		print(k,"==>",v)
+...
+		10 ==> 1.2
+		20 ==> 2.2
+		30 ==> 2.3
+		40 ==> 4.4
+------------------------------------------------------------------------
+>>> d1={10:"Apple",20:"Mango",30:"Kiwi",40:"Sberry"}
+>>> print(d1)
+{10: 'Apple', 20: 'Mango', 30: 'Kiwi', 40: 'Sberry'}
+>>> for x in d1:
+...     print(x)
+...
+10
+20
+30
+40
+>>> for x in d1:
+...     print(x,"-->",d1[x])
+...
+10 --> Apple
+20 --> Mango
+30 --> Kiwi
+40 --> Sberry
+>>> for x in d1:
+...     print(x,"-->",d1.get(x))
+...
+10 --> Apple
+20 --> Mango
+30 --> Kiwi
+40 --> Sberry
+===========================================x====================================================
